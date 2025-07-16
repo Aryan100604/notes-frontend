@@ -1,0 +1,323 @@
+/* Minimalist base styles */
+body,
+html,
+#root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  background: #fafbfc;
+  color: #222;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04), 0 1.5px 4px rgba(0, 0, 0, 0.03);
+  padding: 2rem 2.5rem;
+  min-width: 320px;
+  max-width: 90vw;
+  margin: 1rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+input,
+textarea {
+  padding: 0.7rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  background: #f7f7f7;
+  transition: border 0.2s;
+  color: black;
+}
+input:focus,
+textarea:focus {
+  border: 1.5px solid #bdbdbd;
+  outline: none;
+}
+
+button {
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #444;
+}
+
+label {
+  font-size: 0.98rem;
+  color: #444;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.2rem 2rem 0.5rem 2rem;
+  background: transparent;
+}
+
+.site-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.navbar-main {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.navbar-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
+}
+
+.navbar-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #222;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navbar-links a {
+  color: #222;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: #0070f3;
+}
+
+.navbar-logout {
+  background: #f5f5f5;
+  color: #222;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.navbar-logout:hover {
+  background: #eee;
+}
+
+.footer-main {
+  width: 100%;
+  background: #fafbfc;
+  color: #888;
+  text-align: center;
+  padding: 1.2rem 0 1.5rem 0;
+  font-size: 0.98rem;
+  border-top: 1px solid #f0f0f0;
+  flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 1.2rem 0.7rem;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar-content {
+    padding: 0.7rem 1rem;
+  }
+  .main-content {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+}
+
+.profile-card {
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  border: 1.5px solid rgba(255,255,255,0.25);
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+  position: relative;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+.profile-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00eaff 0%, #6f00ff 100%);
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.2rem auto;
+  box-shadow: 0 0 0 4px rgba(0,234,255,0.12), 0 2px 12px 0 rgba(111,0,255,0.10);
+}
+.profile-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+  color: #222;
+}
+.profile-info {
+  font-size: 1.08rem;
+  color: #444;
+  margin-bottom: 0.7rem;
+}
+
+.dashboard-futuristic {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+.dashboard-greeting {
+  font-size: 1.18rem;
+  color: #00eaff;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-shadow: 0 1px 8px #00eaff33;
+}
+.dashboard-addnote-card {
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 8px 32px 0 rgba(31,38,135,0.18);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  border: 1.5px solid rgba(0,234,255,0.18);
+  margin-bottom: 2.5rem;
+  width: 100%;
+  max-width: 500px;
+  transition: box-shadow 0.2s;
+}
+.dashboard-addnote-card:hover {
+  box-shadow: 0 8px 40px 0 #00eaff44, 0 2px 12px 0 #6f00ff22;
+}
+.dashboard-section-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #6f00ff;
+  letter-spacing: 1px;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  text-shadow: 0 1px 8px #6f00ff22;
+}
+.dashboard-notes-list {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+.note-card-futuristic {
+  background: rgba(255,255,255,0.13);
+  box-shadow: 0 4px 24px 0 #00eaff22;
+  border-radius: 14px;
+  border: 1.2px solid #6f00ff33;
+  transition: box-shadow 0.2s, border 0.2s;
+  position: relative;
+}
+.note-card-futuristic:hover {
+  box-shadow: 0 8px 32px 0 #6f00ff44, 0 2px 12px 0 #00eaff22;
+  border: 1.5px solid #00eaff;
+}
+.futuristic-btn {
+  background: linear-gradient(90deg, #00eaff 0%, #6f00ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #00eaff22;
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+}
+.futuristic-btn:hover {
+  background: linear-gradient(90deg, #6f00ff 0%, #00eaff 100%);
+  color: #fff;
+  box-shadow: 0 4px 16px #6f00ff33;
+}
+.futuristic-btn.cancel {
+  background: #eee;
+  color: #6f00ff;
+  box-shadow: none;
+}
+.futuristic-btn.edit {
+  background: #fff;
+  color: #6f00ff;
+  border: 1.2px solid #6f00ff;
+}
+.futuristic-btn.delete {
+  background: #fff;
+  color: #ff0055;
+  border: 1.2px solid #ff0055;
+}
+.futuristic-btn.edit:hover {
+  background: #6f00ff;
+  color: #fff;
+}
+.futuristic-btn.delete:hover {
+  background: #ff0055;
+  color: #fff;
+}
