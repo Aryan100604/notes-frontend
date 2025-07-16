@@ -28,7 +28,7 @@ export default function NotesDashboard() {
       setError("");
       try {
         const res = await fetch(
-          "https://notes-backend-tau-seven.vercel.app/api/notes/showNotes",
+          "https://notes-backend-xs1f.onrender.com/api/notes/showNotes",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -52,7 +52,7 @@ export default function NotesDashboard() {
     try {
       if (editing) {
         const res = await fetch(
-          `https://notes-backend-tau-seven.vercel.app/api/notes/addNote`,
+          `https://notes-backend-xs1f.onrender.com/api/notes/addNote`,
           {
             method: "PATCH",
             headers: {
@@ -70,7 +70,7 @@ export default function NotesDashboard() {
         setEditing(null);
       } else {
         const res = await fetch(
-          "https://notes-backend-tau-seven.vercel.app/api/notes/addNote",
+          "https://notes-backend-xs1f.onrender.com/api/notes/addNote",
           {
             method: "POST",
             headers: {
@@ -95,7 +95,7 @@ export default function NotesDashboard() {
     if (!window.confirm("Delete this note?")) return;
     try {
       const res = await fetch(
-        `https://notes-backend-tau-seven.vercel.app/api/notes/deleteNote/${id}`,
+        `https://notes-backend-xs1f.onrender.com/api/notes/deleteNote/${id}`,
         {
           method: "DELETE",
           headers: { Authorization: `Bearer ${token}` },

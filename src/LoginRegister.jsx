@@ -24,7 +24,7 @@ export default function LoginRegister() {
     try {
       if (mode === "login") {
         const res = await fetch(
-          "https://notes-backend-tau-seven.vercel.app/api/users/login",
+          "https://notes-backend-xs1f.onrender.com/api/users/login",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -39,7 +39,7 @@ export default function LoginRegister() {
         login(data.accesstoken);
       } else {
         const res = await fetch(
-          "https://notes-backend-tau-seven.vercel.app/api/users/register",
+          "https://notes-backend-xs1f.onrender.com/api/users/register",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
