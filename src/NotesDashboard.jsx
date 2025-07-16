@@ -52,7 +52,7 @@ export default function NotesDashboard() {
     try {
       if (editing) {
         const res = await fetch(
-          `https://notes-backend-xs1f.onrender.com/api/notes/editNote/${editing._id}`,
+          `https://notes-backend-xs1f.onrender.com/api/notes/editNote/${id}`,
           {
             method: "PATCH",
             headers: {
